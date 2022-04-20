@@ -41,8 +41,10 @@ class WelcomeController extends Controller
         $stmt = $this->database->prepare($sql);
         $stmt->execute();
         $results = $stmt->fetchAll();
-        
-        dd($results);
+        echo '<pre>';
+        var_dump($results);
+        echo '</pre>';
+        // dd($results);
         return view('welcome');
     }
 
